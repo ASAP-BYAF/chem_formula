@@ -15,5 +15,5 @@ def dipole(z: int, d: float) -> float:
     return mu
 
 if __name__ == "__main__":
-    res = dipole(1, 2.82e-10)
+    res = dipole(1, 2.40e-10)
     print(res)
