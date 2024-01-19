@@ -9,12 +9,12 @@ def onsagar(mu: float, a: float, eps_r: float) -> float:
         eps_r (float): 溶媒の比誘電率。
 
     Returns:
-        float: オンサーガーの式による溶媒和自由エネルギー
+        float: オンサーガーの式による溶媒和自由エネルギー (J)
     """
 
-    dU: float = -(mu**2)/(4*pi*eps_0*eps_r*(a)**3) * ((eps_r-1)/(2*eps_r+1)) * (NA*J2kcal)
+    dU: float = -((mu**2)/(4*pi*eps_0*(a)**3)) * ((eps_r-1)/(2*eps_r+1))
     return dU   
 
 if __name__ == "__main__":
-    res = onsagar(4.51764e-29,2.4e-10,9.1)
+    res = onsagar(3.8448e-29,2.4e-10,9.1)
     print(res)
